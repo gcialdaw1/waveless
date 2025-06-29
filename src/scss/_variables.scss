@@ -1,0 +1,52 @@
+// Familias tipográficas
+@font-face {
+ font-family: 'Nunito';
+ src: url('/public/fonts/Nunito/Nunito-VariableFont_wght.ttf');
+ font-display: swap;
+}
+
+@font-face {
+ font-family: 'Syne';
+ src: url('/public/fonts/Syne/Syne-VariableFont_wght.ttf');
+ font-display: swap;
+}
+
+$font-family-base: 'Nunito', sans-serif;
+$font-family-heading: 'Syne', sans-serif;
+
+// Tipografías fijas
+$font-size-xsm: 0.75rem;      // 12px
+$font-size-sm: 0.875rem;      // 14px
+$font-size-base: 1rem;        // 16px
+$font-size-md: 1.125rem;      // 18px
+$font-size-lg: 1.375rem;      // 22px
+$font-size-xl: 1.5rem;        // 24px
+
+
+// Tipografías fluidas (varían entre desktop y mobile)
+$font-size-xxl: clamp(1.375rem, 1.2rem + 1.5vw, 1.875rem);         // 24px → 30px
+$font-size-display: clamp(2.125rem, 1.8rem + 2vw, 2.375rem);    // 34px → 38px
+
+
+// Colores
+
+$color-primary: #622F60;
+$color-primary-light: #ccbccc;
+$color-accent: #FF8F50;
+$color-text-title: #2F222F;        
+$color-text-base: #342E34;
+$color-text-light: #FFFFFF;
+$color-text-subtle: #6B7D8D;
+$color-bg: #FFFFFF;
+$color-bg-secondary: #FBF6F4;
+
+// Spacing
+
+$spacing-xxs: 0.25rem; // 4px
+$spacing-xs: 0.5rem;   // 8px
+$spacing-sm: 0.75rem;  // 12px
+$spacing-md: 1rem;     // 16px
+$spacing-lg: 2rem;   // 32px
+$spacing-xl: 2.25rem;     // 40px
+$spacing-xxl: 3rem;    // 48px
+$spacing-hero: clamp(3rem, 10vw, 10rem);

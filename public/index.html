@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waveless - Viajes de aventura</title>
+  <link rel="stylesheet" href="../dist/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a class="header__logo-link" href="#"><img class="header__logo" type="svg" src="./icons/header-logo.svg"
+        alt="Waveless logo" height="32" width="145"></a>
+    <button class="header-hamburger">Abrir menu</button>
+    <nav class="header__nav">
+      <ul class="nav-list">
+        <li class="nav-list__item"><a class="nav-list__link nav-list__link--active" href="#"><img
+              src="./icons/mountains.svg" alt="Icono de montañas">Aventura</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="#"><img src="./icons/globe.svg"
+              alt="Icono de montañas">Destinos</a></li>
+        <li class="nav-list__item"><a class="nav-list__link" href="#"><img src="./icons/cabin.svg"
+              alt="Icono de montañas">Alojamiento</a></li>
+        <li class="nav-list__item nav-list__item--iconless"><a class="nav-list__link" href="#">Sobre nosotros</a></li>
+      </ul>
+      <button class="primary_button">Reserva</button>
+    </nav>
+
+  </header>
+  <main>
+    <section class="slider" data-items="1">
+      <div class="slider__track">
+        <div class="slider__item slider__item--1">
+          <h2>Ruta por australia</h2>
+          <h3>Si te va la aventura, no te lo puedes perder</h3>
+          <button class="accent_button">Más información</button>
+        </div>
+        <div class="slider__item slider__item--2">
+          <h2>Ruta por australia</h2>
+          <h3>Si te va la aventura, no te lo puedes perder</h3>
+          <button class="accent_button">Más información</button>
+        </div>
+        <div class="slider__item slider__item--3">
+          <h2>Ruta por australia</h2>
+          <h3>Si te va la aventura, no te lo puedes perder</h3>
+          <button class="accent_button">Más información</button>
+        </div>
+      </div>
+      <button class="slider__button slider__button--prev">Prev</button>
+      <button class="slider__button slider__button--next">Next</button>
+      </div>
+    </section>
+    <article class="product-galery">
+      <header class="product-galery__header">
+        <h1 class="header__title">Vive tus propias aventuras</h1>
+        <p class="header__subtitle">Para los que les gusta explorar y conocer mundo sin complejos</p>
+        <button class="header__button show-filters-button">Ver filtros</button>
+      </header>
+      <div class="product-galery__galery">
+        <section class=galery__items>
+        </section>
+        <aside class="galery__filter">
+          <header class="filter__header">
+            <h3 class="header__title">Filtrar mi busqueda</h3>
+            <button class="header__button filter-popup-close-button"></button>
+          </header>
+          <section class="filter-section">
+            <button class="filter-section__item-header" aria-expanded="true">
+              <span class="item-header__accordion-title">
+                <img class="accordion-title__icon" src="./icons/mountains.svg" alt="" />
+                Aventura
+              </span>
+              <span class="item-header__accordion-arrow item-header__accordion-arrow--open"></span>
+            </button>
+            <div class="filter-section__item-content">
+              <label class="item-content__checkbox-wrapper">
+                <input type="checkbox" name="Cultura" />
+                <span class="checkbox-wrapper__category">Cultura</span>
+                <span class="checkbox-wrapper__info-icon" title="Información sobre quads"><img class="info-icon__image"
+                    src="./icons/infoIcon.svg" alt="" /></span>
+              </label>
+
+              <label class="item-content__checkbox-wrapper">
+                <input type="checkbox" name="Tecnología" />
+                <span class="checkbox-wrapper__category">Tecnología</span>
+                <span class="checkbox-wrapper__info-icon" title="Volar como un pájaro"><img class="info-icon__image"
+                    src="./icons/infoIcon.svg" alt="" /></span>
+              </label>
+
+              <label class="item-content__checkbox-wrapper">
+                <input type="checkbox" name="Naturaleza" />
+                <span class="checkbox-wrapper__category">Naturaleza</span>
+                <span class="checkbox-wrapper__info-icon" title="Aventura en ríos"><img class="info-icon__image"
+                    src="./icons/infoIcon.svg" alt="" /></span>
+              </label>
+
+              <label class="item-content__checkbox-wrapper">
+                <input type="checkbox" name="Historia" />
+                <span class="checkbox-wrapper__category">Historia</span>
+                <span class="checkbox-wrapper__info-icon" title="Lorem ipsum"><img class="info-icon__image"
+                    src="./icons/infoIcon.svg" alt="" /></span>
+              </label>
+
+              <!-- ... más opciones -->
+              <button class="item-content__show-more show-info_button">Ver 21 más</button>
+            </div>
+          </section>
+
+          <section class="filter-section">
+            <button class="filter-section__item-header" aria-expanded="false">
+              <span class="item-header__accordion-title">
+                <img class="accordion-title__icon" src="icons/cabin.svg" alt="" />
+                Alojamiento
+              </span>
+              <span class="item-header__accordion-arrow item-header__accordion-arrow--open"></span>
+            </button>
+            <div class="filter-section__item-content hidden">
+
+            </div>
+          </section>
+
+          <section class="filter-section">
+            <button class="filter-section__item-header" aria-expanded="true">
+              <span class="item-header__accordion-title">
+                <img class="accordion-title__icon" src="icons/tag.svg" alt="" />
+                Precio
+              </span>
+              <span class="item-header__accordion-arrow item-header__accordion-arrow--open"></span>
+            </button>
+            <div class="filter-section__item-content">
+              <input class="item-content__price-input" type="text" placeholder="Mínimo" />
+              <input class="item-content__price-input" type="text" placeholder="Máximo" />
+            </div>
+          </section>
+        </aside>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo-wrapper">
+      <img class="logo-wrapper__logo" src="icons/header-logo.svg" alt="Logotipo de Waveless" />
+    </div>
+    <div class="footer__copyright">
+      <span class="copyright__text">@2024 Waveless - Todos los derechos reservados.</span>
+    </div>
+  </footer>
+  <script type="module" src="../src/js/main.js"></script>
+</body>
+
+</html>

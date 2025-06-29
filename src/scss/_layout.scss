@@ -1,0 +1,164 @@
+@use './variables';
+
+.footer {
+    background-color: variables.$color-bg-secondary;
+    border-top: 1px solid variables.$color-primary-light;
+
+    .footer__logo-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: variables.$spacing-xxl 0;
+    }
+
+    .footer__copyright {
+        display: flex;
+        justify-content: center;
+        padding: variables.$spacing-md 0;
+        background-color: variables.$color-primary-light;
+
+        .copyright__text {
+            font-family: variables.$font-family-base;
+            color: variables.$color-primary;
+            font-size: variables.$font-size-sm;
+            font-weight: 700;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+
+    .header__logo-link {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__nav {
+        display: flex;
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            padding-right: variables.$spacing-lg;
+
+            .nav-list__item {
+
+                .nav-list__link {
+                    display: flex;
+                    align-items: center;
+                    font-family: variables.$font-family-base;
+                    color: variables.$color-text-base;
+                    text-decoration: none;
+                    position: relative;
+                    line-height: 30px;
+                    padding: variables.$spacing-lg variables.$spacing-md;
+                    border-bottom: 3px solid transparent;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%) rotate(180deg);
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid #000000;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        filter: invert(74%) sepia(26%) saturate(5283%) hue-rotate(326deg) brightness(106%) contrast(101%);
+                        border-bottom: 3px solid #000000;
+                    }
+
+                    &:hover::after,
+                    &:active::after {
+                        opacity: 1;
+                    }
+                }
+
+                .nav-list__link--active {
+                    color: variables.$color-accent;
+                    border-bottom: 3px solid variables.$color-accent;
+
+                    &:hover {
+                        filter: none;
+                        border-bottom: 3px solid variables.$color-accent;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%) rotate(180deg);
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid variables.$color-accent;
+                        opacity: 1;
+                    }
+                }
+
+                .nav-list__link>img {
+                    margin-right: variables.$spacing-xs;
+                }
+            }
+
+        }
+    }
+
+    .header-hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        flex-wrap: wrap;
+        padding: variables.$spacing-lg variables.$spacing-md;
+
+        .header-hamburger {
+            display: block;
+            border: none;
+            background-color: transparent;
+            color: transparent;
+            background-image: url('/public/icons/burgerMenu.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .header__nav {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: white;
+            padding: 16px 0;
+        }
+
+        .header__nav.is-active {
+            display: flex;
+        }
+
+        .nav-list {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .nav-list__item {
+            width: 100%;
+            text-align: center;
+        }
+
+        .primary_button {
+            align-self: center;
+            margin-top: 12px;
+        }
+    }
+}
